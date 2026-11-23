@@ -37,6 +37,10 @@ h3{font-size:1rem;line-height:1.45;font-weight:650;color:var(--ink);margin:0 0 6
 .profile-meta{margin:16px 0 0;padding:0;font-size:.78rem;line-height:1.7;color:var(--muted)}
 .socials{display:flex;gap:14px;flex-wrap:wrap;margin-top:17px;font-size:.78rem}
 .socials a{color:var(--accent);font-weight:600}
+.socials{align-items:center;gap:17px;margin:0}
+.socials a{display:inline-flex;align-items:center;justify-content:center}
+.socials svg{width:25px;height:25px}
+.irit-mark{font-size:1.2rem;font-weight:800;letter-spacing:1px;line-height:1}
 .page{padding:64px 0 88px}
 .page-top{padding-bottom:20px;border:0;margin-bottom:30px}
 .page-top h1{font-size:clamp(2.1rem,3vw,2.8rem);margin:8px 0 10px;color:var(--ink)}
@@ -126,6 +130,7 @@ footer .wrap{
   margin-left:auto;
   margin-right:auto;
 }
+.wrap,
 main.page,
 main.home-grid {
   width: calc(100% - (2 * var(--site-gutter)));
@@ -144,7 +149,11 @@ main.home-grid {
   .site-header .wrap,
   footer .wrap,
   main.page,
-  main.home-grid{width:calc(100% - 48px)}
+  main.home-grid{
+    width:calc(100% - 48px);
+    margin-left:auto;
+    margin-right:auto;
+  }
   .page{padding-top:48px;padding-bottom:64px}
   .home-grid{padding-top:48px;padding-bottom:64px}
 }
