@@ -14,7 +14,9 @@ h3{font:600 1rem/1.45 system-ui,sans-serif;margin:0 0 7px}
 .lead{font-size:1.2rem;line-height:1.7;color:#626158;max-width:650px}
 .intro{max-width:760px;color:#55554e}.home-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px}
 .text-link{font:500 .87rem/1.5 system-ui,sans-serif;text-decoration:none;border-bottom:1px solid #c9ada3;padding-bottom:3px}
-.profile-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:25px 23px;box-shadow:0 10px 28px rgba(75,60,48,.035)}
+.profile-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 10px 28px rgba(75,60,48,.035)}
+.photo-placeholder{height:166px;width:100%;border:1px dashed #cdbdb3;border-radius:13px;background:linear-gradient(145deg,#f6eee8,#f3f1e9);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;margin-bottom:20px;color:#9a786e}
+.photo-placeholder span{font:400 2.3rem/1 Georgia,serif;letter-spacing:-.06em}.photo-placeholder small{font:500 .68rem/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
 .profile-card .small-label{font:500 .72rem/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--sage)}
 .profile-card h2{font:400 1.4rem/1.25 Georgia,serif;margin:8px 0 5px}.profile-card p{font-size:.9rem;line-height:1.6;color:var(--muted);margin:0}
 .profile-meta{margin:18px 0 0;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:400 .82rem/1.8 system-ui,sans-serif;color:#626158}
@@ -22,7 +24,8 @@ h3{font:600 1rem/1.45 system-ui,sans-serif;margin:0 0 7px}
 .page{padding:66px 0 90px}.page-top{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:30px}.page-top h1{font-size:clamp(2.5rem,6vw,3.6rem);margin:9px 0 12px}.page-top p{color:var(--muted);max-width:680px;margin:0}
 .content{max-width:790px}.content p{margin:0 0 18px}.content h2{margin:38px 0 16px;font-size:1.7rem}.content h3{margin-top:24px}
 .list{display:grid;gap:0}.list-item{padding:20px 0;border-bottom:1px solid var(--line)}.list-item:first-child{border-top:1px solid var(--line)}.list-item p{margin:3px 0 0;color:var(--muted);font-size:.95rem}.meta{font:400 .8rem/1.6 system-ui,sans-serif;color:var(--sage)}
-.course-link{font:500 .82rem/1.5 system-ui,sans-serif;text-decoration:none;white-space:nowrap}.course-link:after{content:" ↗"}
+.course-link{font:500 .98rem/1.5 system-ui,sans-serif;text-decoration:none}.course-link:after{content:" ↗"}
 .note{margin-top:28px;padding:15px 18px;border-left:2px solid #c5a69a;background:#f6f0eb;color:#676158;font-size:.92rem}
+.contact-icons{display:flex;gap:12px;margin:22px 0}.contact-icons a{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;text-decoration:none;background:var(--card);font:600 .9rem/1 system-ui,sans-serif}.contact-icons svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font:400 .78rem/1.5 system-ui,sans-serif}.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media(max-width:760px){.nav{padding:17px 0;align-items:flex-start;flex-direction:column;gap:13px}nav{gap:12px 18px}.home-grid{grid-template-columns:1fr;gap:34px;padding:56px 0 65px}.profile-card{max-width:420px}.page{padding:50px 0 65px}.wrap{width:min(100% - 36px,1040px)}}
