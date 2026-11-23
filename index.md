@@ -11,7 +11,7 @@ I am a PhD student in Computer Science at [IRIT](https://www.irit.fr/) (Institut
 {: .lead }
 
 My research lies at the intersection of machine learning, formal reasoning and uncertainty, with a particular interest in Possibility Theory. I am interested in how formal approaches to uncertainty can inform learning systems.
-{: .intro }
+{: .lead }
 
 Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam where I attended the Master of Logic.
-{: .intro }
+{: .lead }
