@@ -40,7 +40,7 @@ h3{font-size:1rem;line-height:1.45;font-weight:650;color:var(--ink);margin:0 0 6
 .socials{align-items:center;gap:17px;margin:0}
 .socials a{display:inline-flex;align-items:center;justify-content:center}
 .socials svg{width:25px;height:25px}
-.socials .irit-logo{display:block;width:25px;height:25px;object-fit:contain}
+.socials .irit-logo{display:block;width:20px;height:20px;object-fit:contain}
 .page{padding:64px 0 88px}
 .page-top{padding-bottom:20px;border:0;margin-bottom:30px}
 .page-top h1{font-size:clamp(2.1rem,3vw,2.8rem);margin:8px 0 10px;color:var(--ink)}
@@ -130,12 +130,12 @@ footer .wrap{
   margin-left:auto;
   margin-right:auto;
 }
-.wrap,
+/* Shift page content to the right while keeping the header and footer centered. */
 main.page,
 main.home-grid {
-  width: calc(100% - (2 * var(--site-gutter)));
+  width: calc(100% - 6rem - var(--site-gutter));
   max-width: 1440px;
-  margin-left: 4rem;
+  margin-left: 6rem;
   margin-right: auto;
 }
 .page-top,
