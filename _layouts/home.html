@@ -10,7 +10,19 @@
   <body>
     {% include header.html %}
     <main class="wrap home-grid">
-      {{ content }}
+      <section>
+        {{ content }}
+      </section>
+      <aside class="sidebar-info">
+        <p>PhD student in Computer Science<br>IRIT · University of Toulouse</p>
+        <p class="profile-meta"><strong>Research</strong><br>Machine Learning · Possibility Theory</p>
+        <p class="profile-meta"><strong>Interests</strong><br>Logic · Uncertainty · AI</p>
+        <p class="socials">
+          <a href="mailto:giuseppemanes1@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/giuseppe-manes-319710256/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.irit.fr/~Giuseppe.Manes/" target="_blank" rel="noopener">IRIT</a>
+        </p>
+      </aside>
     </main>
     {% include footer.html %}
   </body>
