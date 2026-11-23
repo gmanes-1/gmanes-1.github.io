@@ -54,3 +54,16 @@ footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-s
 *,*::before,*::after{border:0!important;outline:0!important;box-shadow:none!important}
 hr{display:none!important}
 a,a:hover,a:focus{text-decoration:none!important}
+
+
+/* Explicitly remove the two visible rules reported on the homepage. */
+header.site-header,
+header.site-header .wrap,
+footer,
+footer .wrap,
+main,
+.home-grid,
+.home-about {
+  border-top: none !important;
+  border-bottom: none !important;
+}
