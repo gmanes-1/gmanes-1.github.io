@@ -9,22 +9,22 @@ permalink: /
 
 # Giuseppe Manes
 
-<p class="lead">
-  I am a PhD student in Computer Science at [IRIT](https://www.irit.fr/) (Institut de Recherche en Informatique de Toulouse), at University of Toulouse. I am a member of the [ADRIA](https://www.irit.fr/departement/intelligence-artificielle/adria/) research team. My PhD research is supervised by [Henri Prade](https://www.irit.fr/~Henri.Prade/), [Florence Dupin de Saint-Cyr](https://www.irit.fr/~Florence.Bannay/), and [Ismaïl Baaj](https://ismailbaaj.fr).
-</p>
+I am a PhD student in Computer Science at [IRIT](https://www.irit.fr/) (Institut de Recherche en Informatique de Toulouse), at Université Toulouse III – Paul Sabatier, and a member of the [ADRIA](https://www.irit.fr/departement/intelligence-artificielle/adria/) research team.
+{: .lead }
 
-<p class="intro">
-  My research lies at the intersection of machine learning, formal reasoning and uncertainty, with a particular interest in Possibility Theory. I am interested in how formal approaches to uncertainty can inform learning systems.
-</p>
+My research lies at the intersection of machine learning, formal reasoning and uncertainty, with a particular interest in Possibility Theory. I am interested in how formal approaches to uncertainty can inform learning systems.
+{: .intro }
 
-<p class="intro">
-  Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam where I attended the Master of Logic.
-</p>
+Before joining IRIT, I studied Logic at the [Institute for Logic, Language and Computation (ILLC)](https://www.illc.uva.nl) at the University of Amsterdam, after completing a BA in Philosophy at the University of Padua and spending a semester at Ludwig-Maximilians-Universität München.
+{: .intro }
+
+**Doctoral supervision** · [Henri Prade](https://www.irit.fr/~Henri.Prade/), Florence Dupin de Saint-Cyr, and [Ismaïl Baaj](https://ismailbaaj.fr/).
+{: .intro .supervision }
 
 </section>
 
 <aside class="sidebar-info">
-  <p>PhD student in Computer Science<br>IRIT · University of Toulouse</p>
+  <p>PhD student in Computer Science<br>IRIT · Université Toulouse III<br>ADRIA team · Toulouse, France</p>
   <p class="profile-meta"><strong>Research</strong><br>Machine Learning · Possibility Theory</p>
   <p class="profile-meta"><strong>Interests</strong><br>Logic · Uncertainty · AI</p>
   <p class="socials">
