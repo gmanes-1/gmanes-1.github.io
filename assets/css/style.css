@@ -133,9 +133,9 @@ footer .wrap{
 /* Shift page content to the right while keeping the header and footer centered. */
 main.page,
 main.home-grid {
-  width: calc(100% - 6rem - var(--site-gutter));
+  width: calc(100% - 8rem - var(--site-gutter));
   max-width: 1440px;
-  margin-left: 6rem;
+  margin-left: 8rem;
   margin-right: auto;
 }
 .page-top,
