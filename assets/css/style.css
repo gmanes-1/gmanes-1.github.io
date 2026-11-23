@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-:root{--paper:#fff;--ink:#333;--muted:#777;--accent:#527b83;--line:#e5e5e5;--sage:#a16f5d}
+:root{--paper:#fff;--ink:#17233f;--muted:#697386;--accent:#263f70;--line:#e1e5ed;--sage:#9a8064}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:15.5px/1.7 Helvetica,Arial,sans-serif}
 a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline;color:#2f5d8a}
+a:hover{text-decoration:underline;color:#14264a}
 .wrap{width:min(960px,calc(100% - 48px));margin:auto}
 .site-header{background:#fff;border-bottom:1px solid var(--line)}
 .nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{font-size:1rem;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.brand span{color:var(--muted)}
+.brand span{color:#52668b}
 nav{display:flex;align-items:center;gap:17px;flex-wrap:wrap}
 nav a{font-size:.82rem;color:#666}
-nav a:hover,nav a[aria-current=page]{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+nav a:hover,nav a[aria-current=page]{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
 main{min-height:70vh}
 .home-grid{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:66px;align-items:start;padding:64px 0 78px}
 .eyebrow,.small-label{font-size:.75rem;line-height:1.5;color:var(--sage);letter-spacing:.04em}
@@ -22,15 +22,16 @@ h3{font-size:1rem;line-height:1.45;font-weight:600;margin:0 0 6px}
 .lead{font-size:1.12rem;line-height:1.65;color:#555;max-width:650px}
 .intro{max-width:700px;color:#555}
 .home-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:26px}
-.text-link{font-size:.9rem;border-bottom:1px solid #b9c9d8;padding-bottom:2px}
+.text-link{font-size:.9rem;border-bottom:1px solid #9baac4;padding-bottom:2px}
 .sidebar-info{padding:0;margin:0;max-width:190px;padding-top:2px}
 .sidebar-info h2{font-size:1.08rem;font-weight:600;margin:0 0 7px;color:#405f65}.sidebar-info p{font-size:.83rem;line-height:1.65;color:var(--muted);margin:0 0 13px}.sidebar-info .profile-meta{font-size:.78rem;line-height:1.6;margin:12px 0 0}.sidebar-info .profile-meta strong{font-weight:600;color:#555}
-.profile-meta{margin:16px 0 0;padding:0;font-size:.78rem;line-height:1.7;color:#666}
+.profile-meta{margin:16px 0 0;padding:0;font-size:.78rem;line-height:1.7;color:var(--muted)}
 .socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;font-size:.78rem}.socials a{color:var(--accent)}
 .page{padding:54px 0 78px}
 .page-top{padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:26px}
-.page-top h1{font-size:2.15rem;margin:8px 0 10px}
+.page-top h1{font-size:2.15rem;margin:8px 0 10px;color:var(--ink)}
 .page-top p{color:var(--muted);max-width:680px;margin:0}
+.home-about{grid-column:1/-1;max-width:760px;padding-top:10px;border-top:1px solid var(--line);margin-top:4px}.home-about h2{color:var(--ink);margin:0 0 16px;font-size:1.45rem}.home-about p{margin:0 0 15px;color:#505b70}.home-about .supervision{font-size:.9rem;color:var(--muted);margin-top:22px}.home-about .supervision strong{color:var(--ink)}
 .content{max-width:760px}
 .content p{margin:0 0 17px}
 .content h2{margin:34px 0 14px;font-size:1.45rem}
