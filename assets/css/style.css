@@ -86,7 +86,6 @@ hr{display:none!important}
 .page-top .eyebrow{color:#9a8064}
 .eyebrow,.small-label{color:#9a8064}
 
-
 /* A quieter, more individual editorial treatment. */
 .eyebrow,.small-label{
   color:#788196;
@@ -95,20 +94,10 @@ hr{display:none!important}
   letter-spacing:.015em;
   text-transform:none;
 }
-h1{
-  font-weight:600;
-  letter-spacing:-.035em;
-}
-h2,h3{
-  font-weight:600;
-  letter-spacing:-.02em;
-}
+h1{font-weight:600;letter-spacing:-.035em}
+h2,h3{font-weight:600;letter-spacing:-.02em}
 nav{gap:28px}
-nav a{
-  font-size:.84rem;
-  letter-spacing:0;
-  opacity:1;
-}
+nav a{font-size:.84rem;letter-spacing:0;opacity:1}
 nav a[aria-current=page]{
   font-weight:600;
   border:0;
@@ -126,7 +115,6 @@ nav a:hover{color:#c5d0e2}
 .content h2{color:var(--ink);font-size:1.32rem;font-weight:600}
 .list-item{padding:12px 0}
 footer{background:#f3f4f6;color:#626c7d}
-
 
 /* Shared page grid: identical outer margins and reading width on every route. */
 :root{--site-gutter:72px;--reading-width:900px}
@@ -147,9 +135,7 @@ main.home-grid{
 }
 .page-top,
 .page .content,
-.home-grid>section{
-  max-width:var(--reading-width);
-}
+.home-grid>section{max-width:var(--reading-width)}
 .page{padding-top:76px;padding-bottom:88px}
 .home-grid{padding-top:76px;padding-bottom:88px}
 @media(max-width:760px){
@@ -158,9 +144,23 @@ main.home-grid{
   .site-header .wrap,
   footer .wrap,
   main.page,
-  main.home-grid{
-    width:calc(100% - 48px);
-  }
+  main.home-grid{width:calc(100% - 48px)}
   .page{padding-top:48px;padding-bottom:64px}
   .home-grid{padding-top:48px;padding-bottom:64px}
+}
+
+/* Sticky footer layout: footer rests at the viewport bottom on short pages,
+   and follows the content naturally on longer pages. */
+html,body{min-height:100%}
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.site-header,footer{flex-shrink:0}
+body>main,
+body>main.page,
+body>main.home-grid{
+  flex:1 0 auto;
+  min-height:0;
 }
