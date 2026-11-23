@@ -80,11 +80,43 @@ hr{display:none!important}
 }
 
 /* Full-bleed color bands with a deliberately inset content grid. */
-.site-header {width:50%} 
-footer {width:100%}
-.site-header .wrap, footer .wrap {width:calc(100% - 144px);max-width:1440px}
-@media(max-width:760px){
- .site-header .wrap, footer .wrap {width:calc(100% - 48px)}
+.site-header {
+  width: 100%;
+}
+
+.site-header .wrap {
+  width: calc(100% - 144px);
+  max-width: 1440px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.site-header .nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.site-header nav {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .wrap {
+  width: calc(100% - 144px);
+  max-width: 1440px;
+}
+
+@media (max-width: 760px) {
+
+  .site-header .wrap,
+  footer .wrap {
+    width: calc(100% - 48px);
+  }
 }
 
 /* Interior pages follow the same editorial measure as the homepage. */
