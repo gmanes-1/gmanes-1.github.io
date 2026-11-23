@@ -164,3 +164,13 @@ body>main.home-grid{
   flex:1 0 auto;
   min-height:0;
 }
+
+
+/* Content links: bold midnight blue; keep the navigation's light treatment. */
+body a:not(nav a){
+  color:#17233f;
+  font-weight:600;
+}
+body a:not(nav a):hover{
+  color:#354d78;
+}
