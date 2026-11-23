@@ -80,7 +80,8 @@ hr{display:none!important}
 }
 
 /* Full-bleed color bands with a deliberately inset content grid. */
-.site-header, footer {width:100%}
+.site-header {width:50%} 
+footer {width:100%}
 .site-header .wrap, footer .wrap {width:calc(100% - 144px);max-width:1440px}
 @media(max-width:760px){
  .site-header .wrap, footer .wrap {width:calc(100% - 48px)}
