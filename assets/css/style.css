@@ -135,7 +135,7 @@ main.page,
 main.home-grid {
   width: calc(100% - 16rem - var(--site-gutter));
   max-width: 1440px;
-  margin-left: 16rem;
+  margin-left: auto;
   margin-right: auto;
 }
 .page-top,
