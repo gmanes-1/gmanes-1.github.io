@@ -13,5 +13,5 @@ I am a PhD student in Computer Science at [IRIT](https://www.irit.fr/) (Institut
 My research lies at the intersection of machine learning, formal reasoning and uncertainty, with a particular interest in Possibility Theory. I am interested in how formal approaches to uncertainty can inform learning systems.
 {: .lead }
 
-Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam where I attended the Master of Logic.
+Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam, where I completed the Master of Logic. My thesis, [*Updating Uncertain Evidence: Conditionalization and Complexity in Multi-Layer Belief Models*](https://eprints.illc.uva.nl/id/document/13799), develops a conditionalization procedure for Multi-Layer Belief Models and studies its epistemic and computational properties.
 {: .lead }
