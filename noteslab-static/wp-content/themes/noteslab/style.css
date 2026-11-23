@@ -1,0 +1,247 @@
+/*
+Theme Name: NotesLab
+Theme URI: https://themeshaper.com/noteslab/
+Author: Automattic
+Author URI: https://automattic.com
+Description: A theme designed for academics, researchers, and students that facilitates posts, long-form publications, and structured project pages, with minimal dependence on feature images.
+Requires at least: 6.9
+Tested up to: 6.9
+Requires PHP: 7.2
+Version: 1.0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: noteslab
+Tags: blog, four-columns, two-columns, style-variations, rtl-language-support, threaded-comments, translation-ready
+
+/* Crossfade page transition */
+@view-transition {
+	navigation: auto;
+}
+
+/* =============================================================================
+   Base
+============================================================================= */
+
+/* Font smoothing */
+body {
+	text-rendering: geometricprecision;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * Progressive enhancement to reduce widows and orphans
+ * https://github.com/WordPress/gutenberg/issues/55190
+ */
+h1 {
+	text-wrap: balance;	
+}
+h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
+	text-wrap: pretty;
+}	
+
+/*
+ * Prevents unnecessary scrollbars while handling long lines of preformatted text.
+ * https://core.trac.wordpress.org/ticket/63875
+ */
+:where(pre) {
+	overflow-x: auto;
+}
+
+/*
+ * Change the position of the more block on the front, by making it a block level element.
+ * https://github.com/WordPress/gutenberg/issues/65934
+ */
+.more-link {
+	display: block;
+}
+
+/*
+ * Make sure footers have no margin.
+ * https://github.com/WordPress/gutenberg/issues/47637
+ */
+footer.wp-block-template-part {
+	margin-block-start: 0 !important;
+}
+
+/* =============================================================================
+   Links
+============================================================================= */
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
+
+/* Utility: hide underline until hover */
+.no-underline a,
+a.no-underline {
+	text-decoration: none !important;
+}
+
+.no-underline a:hover,
+.no-underline a:focus-visible,
+a.no-underline:hover,
+a.no-underline:focus-visible {
+	text-decoration: underline !important;
+}
+
+/* =============================================================================
+   Utilities
+============================================================================= */
+
+/* Utility classes for custom ordering. */
+.order-0 {
+	order: 0;
+}
+
+.order-1 {
+	order: 1;
+}
+
+.grow-0 {
+	flex-grow: 0;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+	.md\:order-0 {
+		order: 0;
+	}
+
+	.md\:order-1 {
+		order: 1;
+	}
+
+	.md\:grow-0 {
+		flex-grow: 0;
+	}
+
+	.md\:grow {
+		flex-grow: 1;
+	}
+}
+
+/* Force Clean button text to align left even at 100% width */
+.wp-block-button.is-style-clean .wp-block-button__link {
+  text-align: left !important;
+}
+
+/* Add + before Clean button label */
+.wp-block-button.is-style-clean .wp-block-button__link::before {
+  content: "+  ";
+}
+
+/* Overlapping Header Utility */
+.is-overlapping {
+	position: relative;
+	z-index: 10;
+}
+
+/* Utility: swap background and text colors on hover */
+.hover-swap:hover {
+  background-color: var(--wp--preset--color--theme-6);
+  color: var(--wp--preset--color--theme-2);
+}
+
+/* Ensure inner text elements inherit the hover color */
+.hover-swap:hover * {
+  color: var(--wp--preset--color--theme-2);
+}
+
+/* Marker block style */
+.is-style-text-marker::before {
+  content: "▸  ";
+  position: relative;
+  top: -1px;
+}
+
+/* Utility: Toast (category-like pill) */
+.toast {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 var(--wp--preset--spacing--20);
+  border: 1px solid var(--wp--preset--color--theme-4);
+  font-size: var(--wp--preset--font-size--x-small);
+
+  margin: 0; /* keep paragraphs from adding extra spacing */
+}
+
+/* If the toast contains a link, make the link inherit the pill and not underline */
+.toast a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utility: clip any oversized block (including stretchying element) */
+.clip-block {
+  overflow: hidden;
+}
+
+/* Utility: compact padding for Search button (works with "Button only") */
+.search-button-compact .wp-block-search__button,
+.search-button-compact .wp-block-search__button-inside .wp-block-search__button {
+  padding-inline: var(--wp--preset--spacing--20) !important;
+}
+
+/* =============================================================================
+   Effects
+============================================================================= */
+
+/* Animated Palette Gradient on top of cover image
+   (original blend look preserved) */
+
+.gradient-animate {
+	position: relative;
+	isolation: isolate;
+}
+
+.gradient-animate .wp-block-cover__background,
+.gradient-animate .wp-block-cover__image-background {
+	z-index: 0;
+}
+
+.gradient-animate::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+
+	background: linear-gradient(
+		130deg,
+		var(--wp--preset--color--theme-1),
+		var(--wp--preset--color--theme-2),
+		var(--wp--preset--color--theme-3),
+		var(--wp--preset--color--theme-4),
+		var(--wp--preset--color--theme-5),
+		var(--wp--preset--color--theme-6)
+	);
+	background-size: 500% 500%;
+	animation: gradientMove 28s ease-in-out infinite;
+
+	mix-blend-mode: difference;
+	opacity: 0.95;
+	pointer-events: none;
+}
+
+.gradient-animate .wp-block-cover__inner-container {
+	position: relative;
+	z-index: 2;
+}
+
+/* Keyframes */
+@keyframes gradientMove {
+	0%   { background-position: 0% 40%; }
+	50%  { background-position: 100% 60%; }
+	100% { background-position: 0% 40%; }
+}
