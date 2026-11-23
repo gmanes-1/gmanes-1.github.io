@@ -48,3 +48,9 @@ h3{font-size:1rem;line-height:1.45;font-weight:600;margin:0 0 6px}
 footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:.75rem}
 .footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media(max-width:760px){.nav{padding:16px 0;align-items:flex-start;flex-direction:column;gap:11px}nav{gap:10px 15px}.home-grid{grid-template-columns:1fr;gap:32px;padding:43px 0 58px}.sidebar-info{max-width:260px}.page{padding:42px 0 60px}.wrap{width:100%;padding-left:18px;padding-right:18px}h1{font-size:2rem}}
+
+
+/* Minimal layout: no visible rules, borders, or underlines anywhere. */
+*,*::before,*::after{border:0!important;outline:0!important;box-shadow:none!important}
+hr{display:none!important}
+a,a:hover,a:focus{text-decoration:none!important}
