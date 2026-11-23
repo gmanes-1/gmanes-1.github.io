@@ -14,6 +14,7 @@ a:hover{color:#101d38}
 .wrap{width:calc(100% - 144px);max-width:1440px;margin:0 auto;padding-left:0;padding-right:0}
 .site-header{background:#17233f;border:0}
 .nav{min-height:78px;display:flex;align-items:center;justify-content:flex-end;gap:24px}
+.nav nav{margin-left:auto;justify-content:flex-end}
 .brand{display:none}
 nav{display:flex;align-items:center;gap:25px;flex-wrap:wrap}
 nav a{font-size:.8rem;letter-spacing:.015em;color:#dce4f2;padding:8px 0;opacity:.88}
@@ -182,6 +183,19 @@ body a:not(nav a){
 }
 body a:not(nav a):hover{
   color:#354d78;
+}
+
+/* Center the main-page text while keeping the profile sidebar distinct. */
+.home-grid>section,
+.page-top,
+.page .content{
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.home-grid>section .home-links,
+.page .content .contact-icons{
+  justify-content:center;
 }
 
 /* Homepage layout and typography corrections */
