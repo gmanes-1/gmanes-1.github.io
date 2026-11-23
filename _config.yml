@@ -1,8 +1,6 @@
 title: Giuseppe Manes
 description: PhD student in Computer Science at IRIT, Toulouse. Research on machine learning, possibility theory and uncertainty.
 markdown: kramdown
-kramdown:
-  parse_block_html: true
 permalink: pretty
 exclude:
   - README.txt
