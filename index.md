@@ -5,7 +5,7 @@ description: PhD student in Computer Science at IRIT, Toulouse. Research on mach
 permalink: /
 ---
 
-<section>
+<section markdown="1">
   <div class="eyebrow">PhD student in Computer Science · Toulouse</div>
 
 # Giuseppe Manes
@@ -27,7 +27,7 @@ permalink: /
 </p>
 </section>
 
-<aside class="sidebar-info">
+<aside class="sidebar-info" markdown="1">
   <p>PhD student in Computer Science<br>IRIT · Université Toulouse III<br>ADRIA team · Toulouse, France</p>
   <p class="profile-meta"><strong>Research</strong><br>Machine Learning · Possibility Theory</p>
   <p class="profile-meta"><strong>Interests</strong><br>Logic · Uncertainty · AI</p>
