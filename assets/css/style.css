@@ -85,3 +85,44 @@ hr{display:none!important}
 .page-top,.page .content{max-width:900px}
 .page-top .eyebrow{color:#9a8064}
 .eyebrow,.small-label{color:#9a8064}
+
+
+/* A quieter, more individual editorial treatment. */
+.eyebrow,.small-label{
+  color:#788196;
+  font-size:.76rem;
+  font-weight:400;
+  letter-spacing:.015em;
+  text-transform:none;
+}
+h1{
+  font-weight:600;
+  letter-spacing:-.035em;
+}
+h2,h3{
+  font-weight:600;
+  letter-spacing:-.02em;
+}
+nav{gap:28px}
+nav a{
+  font-size:.84rem;
+  letter-spacing:0;
+  opacity:1;
+}
+nav a[aria-current=page]{
+  font-weight:600;
+  border:0;
+  padding-bottom:8px;
+  color:#fff;
+}
+nav a:hover{color:#c5d0e2}
+.lead{color:#303b50;font-size:1.12rem;line-height:1.7}
+.intro{color:#525d70}
+.sidebar-info p{font-size:.85rem}
+.sidebar-info .profile-meta strong{font-weight:600}
+.page{padding-top:58px}
+.page-top{margin-bottom:26px}
+.page-top p{font-size:1rem;color:#626c7d}
+.content h2{color:var(--ink);font-size:1.32rem;font-weight:600}
+.list-item{padding:12px 0}
+footer{background:#f3f4f6;color:#626c7d}
