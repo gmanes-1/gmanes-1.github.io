@@ -5,6 +5,8 @@ description: PhD student in Computer Science at IRIT, Toulouse. Research on mach
 permalink: /
 ---
 
+<section markdown="1">
+
 # Giuseppe Manes
 
 <p class="lead">
@@ -16,12 +18,12 @@ permalink: /
 </p>
 
 <p class="intro">
-Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam where I attended the Master of Logic.
+  Before joining IRIT, I was at the [ILLC](https://www.illc.uva.nl) (Institute for Logic, Language and Computation) at the University of Amsterdam where I attended the Master of Logic.
 </p>
 
 </section>
 
-<aside class="sidebar-info" markdown="1">
+<aside class="sidebar-info">
   <p>PhD student in Computer Science<br>IRIT · University of Toulouse</p>
   <p class="profile-meta"><strong>Research</strong><br>Machine Learning · Possibility Theory</p>
   <p class="profile-meta"><strong>Interests</strong><br>Logic · Uncertainty · AI</p>
