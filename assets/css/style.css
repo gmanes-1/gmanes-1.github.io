@@ -174,3 +174,30 @@ body a:not(nav a){
 body a:not(nav a):hover{
   color:#354d78;
 }
+
+/* Homepage layout and typography corrections */
+main.home-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 220px;
+  column-gap:clamp(48px,7vw,112px);
+  align-items:start;
+}
+.home-grid>section{
+  min-width:0;
+  max-width:900px;
+}
+.home-grid>section .lead,
+.home-grid>section .intro{
+  font-size:1rem;
+  line-height:1.72;
+}
+.home-grid>.sidebar-info{
+  display:block;
+  width:100%;
+  max-width:220px;
+  min-width:0;
+}
+@media(max-width:760px){
+  main.home-grid{grid-template-columns:minmax(0,1fr);row-gap:34px}
+  .home-grid>.sidebar-info{max-width:300px}
+}
