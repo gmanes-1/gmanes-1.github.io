@@ -133,9 +133,9 @@ footer .wrap{
 /* Shift page content to the right while keeping the header and footer centered. */
 main.page,
 main.home-grid {
-  width: calc(100% - 12rem - var(--site-gutter));
+  width: calc(100% - 16rem - var(--site-gutter));
   max-width: 1440px;
-  margin-left: 12rem;
+  margin-left: 16rem;
   margin-right: auto;
 }
 .page-top,
@@ -205,6 +205,9 @@ main.home-grid{
   width:100%;
   max-width:220px;
   min-width:0;
+}
+.home-grid>.sidebar-info .socials{
+  margin-top:30px;
 }
 @media(max-width:760px){
   main.home-grid{grid-template-columns:minmax(0,1fr);row-gap:34px}
