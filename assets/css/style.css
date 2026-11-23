@@ -13,7 +13,7 @@ a{color:var(--accent);text-decoration:none;transition:color .18s ease}
 a:hover{color:#101d38}
 .wrap{width:calc(100% - 144px);max-width:1440px;margin:0 auto;padding-left:0;padding-right:0}
 .site-header{background:#17233f;border:0}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:flex-start;gap:24px}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:flex-end;gap:24px}
 .brand{display:none}
 nav{display:flex;align-items:center;gap:25px;flex-wrap:wrap}
 nav a{font-size:.8rem;letter-spacing:.015em;color:#dce4f2;padding:8px 0;opacity:.88}
@@ -64,7 +64,7 @@ h3{font-size:1rem;line-height:1.45;font-weight:650;color:var(--ink);margin:0 0 6
 .contact-icons{display:flex;gap:17px;margin:16px 0}
 .contact-icons a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:.82rem;color:var(--accent)}
 footer{border:0;background:#eef2f8;padding:28px 0;color:#52617b;font-size:.78rem}
-.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-row{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
 *,*::before,*::after{outline:0!important;box-shadow:none!important}
 hr{display:none!important}
 @media(max-width:760px){
@@ -133,7 +133,7 @@ footer .wrap{
 /* Shift page content to the right while keeping the header and footer centered. */
 main.page,
 main.home-grid {
-  width: calc(100% - var(--site-gutter));
+  width: calc(100% - (2 * var(--site-gutter)));
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -188,7 +188,7 @@ body a:not(nav a):hover{
 main.home-grid{
   display:grid;
   grid-template-columns:minmax(0,1fr) 220px;
-  column-gap:clamp(48px,7vw,112px);
+  column-gap:clamp(32px,4vw,64px);
   align-items:start;
 }
 .home-grid>section{
