@@ -80,3 +80,8 @@ hr{display:none!important}
 @media(max-width:760px){
  .site-header .wrap, footer .wrap {width:calc(100% - 48px)}
 }
+
+/* Interior pages follow the same editorial measure as the homepage. */
+.page-top,.page .content{max-width:900px}
+.page-top .eyebrow{color:#9a8064}
+.eyebrow,.small-label{color:#9a8064}
