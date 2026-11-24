@@ -853,3 +853,168 @@ body.one-page-home > .one-page-footer {
     text-align: left;
   }
 }
+
+
+/* Purpose-built mobile layout: compact blue header and an accessible collapsible menu. */
+body.one-page-home .mobile-brand,
+body.one-page-home .mobile-menu-toggle {
+  display: none;
+}
+@media (max-width: 800px) {
+  body.one-page-home > .top-section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 62px;
+    padding: 0 20px;
+    background: #17233f;
+  }
+  body.one-page-home .mobile-brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 62px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 650;
+    letter-spacing: -.02em;
+  }
+  body.one-page-home .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid rgba(220,228,242,.42);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: .84rem;
+    cursor: pointer;
+  }
+  body.one-page-home .menu-toggle-icon,
+  body.one-page-home .menu-toggle-icon::before,
+  body.one-page-home .menu-toggle-icon::after {
+    display: block;
+    width: 17px;
+    height: 2px;
+    background: currentColor;
+    content: "";
+  }
+  body.one-page-home .menu-toggle-icon {
+    position: relative;
+  }
+  body.one-page-home .menu-toggle-icon::before {
+    position: absolute;
+    top: -6px;
+  }
+  body.one-page-home .menu-toggle-icon::after {
+    position: absolute;
+    top: 6px;
+  }
+  body.one-page-home > .top-section-nav nav#mobile-site-nav {
+    display: none;
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-height: 0;
+    max-height: calc(100vh - 62px);
+    margin: 0;
+    padding: 4px 0 14px;
+    overflow-y: auto;
+  }
+  body.one-page-home > .top-section-nav.menu-open nav#mobile-site-nav {
+    display: flex;
+  }
+  body.one-page-home > .top-section-nav nav#mobile-site-nav a {
+    display: block;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(220,228,242,.15);
+    color: #dce4f2;
+    font-size: .92rem;
+  }
+  body.one-page-home > .top-section-nav nav#mobile-site-nav a.active,
+  body.one-page-home > .top-section-nav nav#mobile-site-nav a[aria-current="location"] {
+    color: #fff;
+    border-bottom: 1px solid rgba(220,228,242,.35);
+    text-decoration: none;
+  }
+  body.one-page-home > .profile-sidebar {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    padding: 22px 24px;
+    background: #17233f;
+  }
+  body.one-page-home .sidebar-identity {
+    padding-left: 4px;
+  }
+  body.one-page-home .sidebar-name {
+    font-size: 1.08rem;
+  }
+  body.one-page-home .sidebar-role {
+    margin-top: 7px;
+    font-size: .83rem;
+  }
+  body.one-page-home .sidebar-affiliation {
+    font-size: .78rem;
+  }
+  body.one-page-home .sidebar-rule {
+    margin: 18px 0 14px;
+  }
+  body.one-page-home .sidebar-contact {
+    margin-top: 0;
+  }
+  body.one-page-home .sidebar-contact p {
+    margin: 0;
+    font-size: .77rem;
+  }
+  body.one-page-home .sidebar-contact .socials {
+    margin-top: 14px;
+  }
+  body.one-page-home main.one-page-content {
+    width: calc(100% - 40px);
+    max-width: 620px;
+    padding: 38px 0 18px;
+  }
+  body.one-page-home .one-page-content .scroll-section {
+    margin-bottom: 42px;
+    padding-bottom: 38px;
+    scroll-margin-top: 82px;
+  }
+  body.one-page-home .one-page-content .home-section {
+    min-height: 0;
+  }
+  body.one-page-home .one-page-content h1 {
+    font-size: clamp(2rem, 8vw, 2.65rem);
+    line-height: 1.12;
+  }
+  body.one-page-home .one-page-content h2 {
+    font-size: clamp(1.55rem, 6vw, 1.95rem);
+  }
+  body.one-page-home .one-page-content p,
+  body.one-page-home .one-page-content li {
+    font-size: .94rem;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+  }
+  body.one-page-home > .one-page-footer {
+    padding: 18px 20px;
+    text-align: left;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.one-page-home,
+  body.one-page-home * {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
