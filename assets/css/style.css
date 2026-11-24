@@ -823,3 +823,33 @@ body.one-page-home > .profile-sidebar {
     padding: 18px 22px;
   }
 }
+
+
+/* Full-width footer sits below both the profile rail and the content column. */
+body.one-page-home {
+  grid-template-rows: auto 1fr auto;
+}
+body.one-page-home > .one-page-content {
+  grid-row: 2;
+}
+body.one-page-home > .one-page-footer {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  width: 100%;
+  margin: 0;
+  padding: 22px clamp(28px, 4vw, 64px);
+  background: #f3f4f6;
+  color: #626c7d;
+  border-top: 1px solid #e7eaf0;
+  text-align: right;
+}
+@media (max-width: 800px) {
+  body.one-page-home {
+    grid-template-rows: auto auto auto;
+  }
+  body.one-page-home > .one-page-footer {
+    width: 100%;
+    padding: 20px 22px;
+    text-align: left;
+  }
+}
