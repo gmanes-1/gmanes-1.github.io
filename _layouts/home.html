@@ -8,14 +8,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body class="one-page-home">
-  <aside class="profile-sidebar" aria-label="Profile and page navigation">
-    <div class="sidebar-identity">
-      <a class="sidebar-name" href="#home">Giuseppe Manes</a>
-      <p class="sidebar-role">PhD student in Computer Science</p>
-      <p class="sidebar-affiliation">Université de Toulouse · IRIT · ADRIA</p>
-    </div>
-    <div class="sidebar-rule"></div>
-    <nav class="sidebar-nav" aria-label="Page sections">
+  <header class="site-header top-section-nav">
+    <nav aria-label="Main navigation">
       <a href="#home" class="active" aria-current="location">Home</a>
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
@@ -24,6 +18,15 @@
       <a href="#activities">Activities</a>
       <a href="#contact">Contact</a>
     </nav>
+  </header>
+
+  <aside class="profile-sidebar" aria-label="Profile information">
+    <div class="sidebar-identity">
+      <a class="sidebar-name" href="#home">Giuseppe Manes</a>
+      <p class="sidebar-role">PhD student in Computer Science</p>
+      <p class="sidebar-affiliation">Université de Toulouse · IRIT · ADRIA</p>
+    </div>
+    <div class="sidebar-rule"></div>
     <div class="sidebar-contact">
       <p><strong>Address</strong><br>Université de Toulouse, IRIT, ADRIA team<br>118, route de Narbonne<br>31062 Toulouse, France</p>
       <div class="socials" aria-label="Contact links">
@@ -97,7 +100,7 @@
 
   <script>
     (() => {
-      const links = Array.from(document.querySelectorAll('.sidebar-nav a'));
+      const links = Array.from(document.querySelectorAll('.top-section-nav a'));
       const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
       if (!('IntersectionObserver' in window)) return;
       const observer = new IntersectionObserver(entries => {
