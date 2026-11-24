@@ -1,48 +1,113 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <title>Giuseppe Manes</title>
+  <title>Giuseppe Manes | Academic Profile</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-
-<body>
-  {% include header.html %}
-  <main class="wrap home-grid">
-    <section>
-      {{ content }}
-    </section>
-    <aside class="sidebar-info">
-      <p>PhD student in Computer Science<br>
-      <p class="profile-meta"><strong>Address</strong> Université de Toulouse, IRIT, ADRIA team
-        118, route de Narbonne
-        31062 Toulouse, France</p>
-      <!-- <p class="profile-meta"><strong>Interests</strong><br>Logic · Uncertainty · AI</p> -->
-      <p></p>
-      <p class="socials" aria-label="Contact links">
+<body class="one-page-home">
+  <aside class="profile-sidebar" aria-label="Profile and page navigation">
+    <a class="sidebar-name" href="#home">Giuseppe Manes</a>
+    <p class="sidebar-role">PhD student in Computer Science</p>
+    <p class="sidebar-affiliation">Université de Toulouse · IRIT · ADRIA</p>
+    <div class="sidebar-rule"></div>
+    <nav class="sidebar-nav" aria-label="Page sections">
+      <a href="#home" class="active">Home</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#activities">Activities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="sidebar-contact" id="contact">
+      <p><strong>Address</strong><br>Université de Toulouse, IRIT, ADRIA team<br>118, route de Narbonne<br>31062 Toulouse, France</p>
+      <div class="socials" aria-label="Contact links">
         <a href="mailto:giuseppe.manes@irit.fr" aria-label="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
-            <path d="m3 7 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" />
-          </svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/giuseppe-manes-319710256/" target="_blank" rel="noopener"
-          aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor"
-              d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM8 18H5V9h3v9ZM6.5 7.73a1.74 1.74 0 1 1 0-3.48 1.74 1.74 0 0 1 0 3.48ZM19 18h-3v-4.38c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V18h-3V9h2.88v1.23h.04c.4-.7 1.38-1.45 2.84-1.45C18.68 8.78 19 10.7 19 13.2V18Z" />
-          </svg>
+        <a href="https://www.linkedin.com/in/giuseppe-manes-319710256/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM8 18H5V9h3v9ZM6.5 7.73a1.74 1.74 0 1 1 0-3.48 1.74 1.74 0 0 1 0 3.48ZM19 18h-3v-4.38c0-1.04-.02-2.38-1.45-2.38-1.45 0-1.67 1.13-1.67 2.3V18h-3V9h2.88v1.23h.04c.4-.7 1.38-1.45 2.84-1.45C18.68 8.78 19 10.7 19 13.2V18Z"/></svg>
         </a>
         <a href="https://www.irit.fr/~Giuseppe.Manes/" target="_blank" rel="noopener" aria-label="IRIT">
           <img class="irit-logo" src="{{ '/assets/images/logo-irit.svg' | relative_url }}" alt="IRIT">
         </a>
-      </p>
-    </aside>
-  </main>
-  {% include footer.html %}
-</body>
+      </div>
+    </div>
+  </aside>
 
+  <main class="one-page-content">
+    <section class="scroll-section home-section" id="home" aria-labelledby="home-title">
+      {{ content }}
+    </section>
+
+    {% assign research_page = site.pages | where: "url", "/research/" | first %}
+    {% if research_page %}
+    <section class="scroll-section" id="research">
+      <p class="section-kicker">Academic profile</p>
+      <h2>Research</h2>
+      {{ research_page.content }}
+    </section>
+    {% endif %}
+
+    {% assign teaching_page = site.pages | where: "url", "/teaching/" | first %}
+    {% if teaching_page %}
+    <section class="scroll-section" id="teaching">
+      <p class="section-kicker">Academic profile</p>
+      <h2>Teaching</h2>
+      {{ teaching_page.content }}
+    </section>
+    {% endif %}
+
+    {% assign education_page = site.pages | where: "url", "/education/" | first %}
+    {% if education_page %}
+    <section class="scroll-section" id="education">
+      <p class="section-kicker">Academic profile</p>
+      <h2>Education</h2>
+      {{ education_page.content }}
+    </section>
+    {% endif %}
+
+    {% assign publications_page = site.pages | where: "url", "/publications/" | first %}
+    {% if publications_page %}
+    <section class="scroll-section" id="publications">
+      <p class="section-kicker">Academic profile</p>
+      <h2>Publications</h2>
+      {{ publications_page.content }}
+    </section>
+    {% endif %}
+
+    {% assign activities_page = site.pages | where: "url", "/activities/" | first %}
+    {% if activities_page %}
+    <section class="scroll-section" id="activities">
+      <p class="section-kicker">Academic profile</p>
+      <h2>Academic activities</h2>
+      {{ activities_page.content }}
+    </section>
+    {% endif %}
+    <footer class="one-page-footer">© {{ site.time | date: '%Y' }} Giuseppe Manes</footer>
+  </main>
+
+  <script>
+    (() => {
+      const links = Array.from(document.querySelectorAll('.sidebar-nav a'));
+      const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if (!('IntersectionObserver' in window)) return;
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          links.forEach(link => {
+            const selected = link.getAttribute('href') === '#' + entry.target.id;
+            link.classList.toggle('active', selected);
+            if (selected) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+          });
+        });
+      }, { rootMargin: '-18% 0px -65% 0px', threshold: 0 });
+      sections.forEach(section => observer.observe(section));
+    })();
+  </script>
+</body>
 </html>
