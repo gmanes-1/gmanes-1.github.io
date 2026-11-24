@@ -790,3 +790,36 @@ body.one-page-home .sidebar-identity {
     padding-left: 8px;
   }
 }
+
+
+/* Restore the original blue top bar and give the profile rail a quarter-page width. */
+body.one-page-home {
+  grid-template-columns: clamp(280px, 25vw, 380px) minmax(0, 1fr);
+}
+body.one-page-home > .top-section-nav {
+  background: #17233f;
+  border-bottom: 0;
+}
+body.one-page-home > .top-section-nav nav a {
+  color: #dce4f2;
+}
+body.one-page-home > .top-section-nav nav a:hover {
+  color: #fff;
+}
+body.one-page-home .top-section-nav nav a.active,
+body.one-page-home .top-section-nav nav a[aria-current="location"] {
+  color: #fff;
+  border-bottom: 2px solid #aebbd4;
+}
+body.one-page-home > .profile-sidebar {
+  padding-left: clamp(28px, 3vw, 52px);
+  padding-right: clamp(28px, 3vw, 48px);
+}
+@media (max-width: 800px) {
+  body.one-page-home {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.one-page-home > .profile-sidebar {
+    padding: 18px 22px;
+  }
+}
