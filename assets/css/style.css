@@ -439,3 +439,236 @@ body.one-page-home {
   .one-page-content .scroll-section { min-height: 0; padding-bottom: 58px; margin-bottom: 48px; scroll-margin-top: 112px; }
   .one-page-content .home-section { min-height: 65vh; }
 }
+
+
+/* Clean, isolated styles for the one-page homepage. */
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body.one-page-home {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+  color: #17233f;
+}
+body.one-page-home .profile-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 560px;
+  overflow-y: auto;
+  padding: 48px 28px;
+  background: #17233f;
+  color: #dce4f2;
+}
+body.one-page-home .sidebar-name {
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 650;
+  letter-spacing: -.025em;
+}
+body.one-page-home .sidebar-role {
+  margin: 12px 0 4px;
+  color: #eef2f8;
+  font-size: .84rem;
+  line-height: 1.5;
+}
+body.one-page-home .sidebar-affiliation {
+  margin: 0;
+  color: #b8c4d8;
+  font-size: .78rem;
+  line-height: 1.6;
+}
+body.one-page-home .sidebar-rule {
+  height: 1px;
+  margin: 28px 0 20px;
+  background: rgba(220,228,242,.22);
+}
+body.one-page-home nav.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+body.one-page-home nav.sidebar-nav a {
+  display: block;
+  padding: 9px 12px;
+  border: 0;
+  border-left: 2px solid transparent;
+  color: #dce4f2;
+  font-size: .88rem;
+  font-weight: 400;
+  line-height: 1.4;
+  opacity: .9;
+}
+body.one-page-home nav.sidebar-nav a:hover,
+body.one-page-home nav.sidebar-nav a.active,
+body.one-page-home nav.sidebar-nav a[aria-current="location"] {
+  color: #fff;
+  background: rgba(255,255,255,.09);
+  border-left-color: #c2cde0;
+  opacity: 1;
+}
+body.one-page-home .sidebar-contact {
+  margin-top: 38px;
+}
+body.one-page-home .sidebar-contact p {
+  color: #b8c4d8;
+  font-size: .73rem;
+  line-height: 1.7;
+}
+body.one-page-home .sidebar-contact strong { color: #fff; }
+body.one-page-home .sidebar-contact .socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+}
+body.one-page-home .sidebar-contact .socials a {
+  display: inline-flex;
+  color: #fff;
+}
+body.one-page-home .sidebar-contact .socials svg { width: 20px; height: 20px; }
+body.one-page-home .sidebar-contact .irit-logo {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+body.one-page-home main.one-page-content {
+  display: block;
+  width: min(100% - 104px, 860px);
+  max-width: 860px;
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 78px 0 32px;
+}
+body.one-page-home .one-page-content .scroll-section {
+  display: flow-root;
+  min-height: 0;
+  margin: 0 0 72px;
+  padding: 0 0 64px;
+  border-bottom: 1px solid #e7eaf0;
+  scroll-margin-top: 34px;
+}
+body.one-page-home .one-page-content .home-section {
+  min-height: 65vh;
+}
+body.one-page-home .one-page-content h1 {
+  margin: 0 0 26px;
+  color: #17233f;
+  font-size: clamp(2.4rem, 4vw, 3.25rem);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -.04em;
+}
+body.one-page-home .one-page-content h2 {
+  margin: 0 0 22px;
+  color: #17233f;
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.03em;
+}
+body.one-page-home .one-page-content h3 {
+  margin: 22px 0 6px;
+  color: #17233f;
+  font-size: 1rem;
+}
+body.one-page-home .one-page-content p,
+body.one-page-home .one-page-content li {
+  color: #505b70;
+  font-size: .98rem;
+  line-height: 1.8;
+}
+body.one-page-home .one-page-content p { margin: 0 0 18px; }
+body.one-page-home .one-page-content ul { padding-left: 1.3rem; margin: 12px 0 22px; }
+body.one-page-home .one-page-content a {
+  color: #263f70;
+  font-weight: 600;
+}
+body.one-page-home .one-page-content a:hover { color: #101d38; }
+body.one-page-home .one-page-content .section-kicker {
+  margin: 0 0 12px;
+  color: #788196;
+  font-size: .76rem;
+  line-height: 1.5;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+body.one-page-home .one-page-content .list { display: block; }
+body.one-page-home .one-page-content .list-item {
+  padding: 14px 0;
+  border: 0;
+}
+body.one-page-home .one-page-content .list-item p { margin: 3px 0 0; }
+body.one-page-home .one-page-content .meta {
+  color: #788196;
+  font-size: .78rem;
+}
+body.one-page-home .one-page-content .note {
+  margin-top: 22px;
+  padding-left: 14px;
+  border: 0;
+  background: transparent;
+  color: #697386;
+}
+body.one-page-home .one-page-content .contact-section p { margin-bottom: 12px; }
+body.one-page-home .one-page-footer {
+  padding: 4px 0 24px;
+  color: #788196;
+  font-size: .76rem;
+}
+@media (max-width: 800px) {
+  body.one-page-home {
+    display: block;
+  }
+  body.one-page-home .profile-sidebar {
+    position: sticky;
+    z-index: 30;
+    top: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding: 14px 20px 10px;
+  }
+  body.one-page-home .sidebar-name { font-size: 1rem; }
+  body.one-page-home .sidebar-role,
+  body.one-page-home .sidebar-affiliation,
+  body.one-page-home .sidebar-rule,
+  body.one-page-home .sidebar-contact { display: none; }
+  body.one-page-home nav.sidebar-nav {
+    flex-direction: row;
+    gap: 4px 16px;
+    overflow-x: auto;
+    padding-top: 10px;
+    white-space: nowrap;
+  }
+  body.one-page-home nav.sidebar-nav a {
+    flex: 0 0 auto;
+    padding: 5px 0 7px;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+  }
+  body.one-page-home nav.sidebar-nav a:hover,
+  body.one-page-home nav.sidebar-nav a.active,
+  body.one-page-home nav.sidebar-nav a[aria-current="location"] {
+    background: transparent;
+    border-bottom-color: #c2cde0;
+  }
+  body.one-page-home main.one-page-content {
+    width: calc(100% - 44px);
+    max-width: 680px;
+    padding: 48px 0 24px;
+  }
+  body.one-page-home .one-page-content .scroll-section {
+    margin-bottom: 48px;
+    padding-bottom: 42px;
+    scroll-margin-top: 110px;
+  }
+  body.one-page-home .one-page-content .home-section { min-height: 55vh; }
+}
