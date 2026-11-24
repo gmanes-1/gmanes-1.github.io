@@ -764,3 +764,29 @@ body.one-page-home .top-section-nav nav a[aria-current="location"] {
     padding: 42px 0 24px;
   }
 }
+
+
+/* Refine the one-page header and give the profile name a little more breathing room. */
+body.one-page-home > .top-section-nav {
+  background: #fff;
+  border-bottom: 1px solid #e7eaf0;
+}
+body.one-page-home > .top-section-nav nav a {
+  color: #17233f;
+}
+body.one-page-home > .top-section-nav nav a:hover {
+  color: #697386;
+}
+body.one-page-home .top-section-nav nav a.active,
+body.one-page-home .top-section-nav nav a[aria-current="location"] {
+  color: #17233f;
+  border-bottom: 2px solid #9a8064;
+}
+body.one-page-home .sidebar-identity {
+  padding-left: 14px;
+}
+@media (max-width: 800px) {
+  body.one-page-home .sidebar-identity {
+    padding-left: 8px;
+  }
+}
