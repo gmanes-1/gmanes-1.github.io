@@ -672,3 +672,95 @@ body.one-page-home .one-page-footer {
   }
   body.one-page-home .one-page-content .home-section { min-height: 55vh; }
 }
+
+
+/* Corrected homepage composition: full-width top navigation, profile-only left rail. */
+body.one-page-home {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: stretch;
+}
+body.one-page-home > .top-section-nav {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  min-height: 78px;
+}
+body.one-page-home > .top-section-nav nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+  width: calc(100% - 144px);
+  max-width: 1440px;
+  min-height: 78px;
+  margin: 0 auto;
+}
+body.one-page-home > .top-section-nav nav a {
+  flex: 0 0 auto;
+}
+body.one-page-home > .profile-sidebar {
+  grid-column: 1;
+  grid-row: 2;
+  position: sticky;
+  top: 78px;
+  height: calc(100vh - 78px);
+  min-height: 0;
+  overflow-y: auto;
+}
+body.one-page-home > .profile-sidebar .sidebar-contact {
+  display: block;
+}
+body.one-page-home > .one-page-content {
+  grid-column: 2;
+  grid-row: 2;
+  width: min(100% - 88px, 860px);
+  max-width: 860px;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+body.one-page-home .top-section-nav nav a.active,
+body.one-page-home .top-section-nav nav a[aria-current="location"] {
+  color: #fff;
+  border-bottom: 2px solid #aebbd4;
+  padding-bottom: 6px;
+}
+@media (max-width: 800px) {
+  body.one-page-home {
+    display: block;
+  }
+  body.one-page-home > .top-section-nav {
+    min-height: 0;
+  }
+  body.one-page-home > .top-section-nav nav {
+    width: calc(100% - 40px);
+    min-height: 64px;
+    justify-content: flex-start;
+    gap: 8px 18px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  body.one-page-home > .profile-sidebar {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    padding: 18px 22px;
+  }
+  body.one-page-home > .profile-sidebar .sidebar-role,
+  body.one-page-home > .profile-sidebar .sidebar-affiliation,
+  body.one-page-home > .profile-sidebar .sidebar-rule,
+  body.one-page-home > .profile-sidebar .sidebar-contact {
+    display: block;
+  }
+  body.one-page-home > .one-page-content {
+    width: calc(100% - 44px);
+    padding: 42px 0 24px;
+  }
+}
