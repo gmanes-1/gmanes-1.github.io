@@ -9,7 +9,11 @@
 </head>
 <body class="one-page-home">
   <header class="site-header top-section-nav">
-    <nav aria-label="Main navigation">
+    <a class="mobile-brand" href="#home">Giuseppe Manes</a>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-site-nav">
+      <span class="menu-toggle-label">Menu</span><span class="menu-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav id="mobile-site-nav" aria-label="Main navigation">
       <a href="#home" class="active" aria-current="location">Home</a>
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
@@ -101,7 +105,29 @@
 
   <script>
     (() => {
-      const links = Array.from(document.querySelectorAll('.top-section-nav a'));
+      const header = document.querySelector('.top-section-nav');
+      const menuButton = document.querySelector('.mobile-menu-toggle');
+      const menuLinks = document.querySelectorAll('#mobile-site-nav a');
+      if (header && menuButton) {
+        menuButton.addEventListener('click', () => {
+          const isOpen = header.classList.toggle('menu-open');
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+          menuButton.querySelector('.menu-toggle-label').textContent = isOpen ? 'Close' : 'Menu';
+        });
+        menuLinks.forEach(link => link.addEventListener('click', () => {
+          header.classList.remove('menu-open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.querySelector('.menu-toggle-label').textContent = 'Menu';
+        }));
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape') {
+            header.classList.remove('menu-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.querySelector('.menu-toggle-label').textContent = 'Menu';
+          }
+        });
+      }
+      const links = Array.from(document.querySelectorAll('.top-section-nav nav a'));
       const sections = links.map(link => document.getElementById(link.hash.slice(1))).filter(Boolean);
       if (!('IntersectionObserver' in window)) return;
       const observer = new IntersectionObserver(entries => {
