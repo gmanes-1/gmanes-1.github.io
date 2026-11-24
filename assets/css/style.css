@@ -317,3 +317,13 @@ main.home-grid>.sidebar-info{
   }
   main.home-grid>.sidebar-info{width:100%;max-width:300px}
 }
+
+
+/* Slightly enlarge the IRIT logo and use midnight blue for LinkedIn. */
+.socials .irit-logo{
+  width:24px;
+  height:24px;
+}
+.socials a[aria-label="LinkedIn"]{
+  color:#17233f;
+}
