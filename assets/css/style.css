@@ -1018,3 +1018,67 @@ body.one-page-home .mobile-menu-toggle {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Mobile: icon-only three-line toggle on the right; profile block directly below the header. */
+@media (max-width: 800px) {
+  body.one-page-home > .top-section-nav {
+    justify-content: space-between;
+  }
+  body.one-page-home .mobile-menu-toggle {
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 1px solid rgba(220,228,242,.42);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+  }
+  body.one-page-home .menu-toggle-icon,
+  body.one-page-home .menu-toggle-icon::before,
+  body.one-page-home .menu-toggle-icon::after {
+    position: absolute;
+    left: 12px;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    content: "";
+    transition: transform .18s ease, top .18s ease, opacity .18s ease;
+  }
+  body.one-page-home .menu-toggle-icon {
+    position: relative;
+    left: auto;
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+  }
+  body.one-page-home .menu-toggle-icon::before {
+    top: -6px;
+  }
+  body.one-page-home .menu-toggle-icon::after {
+    top: 6px;
+  }
+  body.one-page-home .top-section-nav.menu-open .menu-toggle-icon {
+    background: transparent;
+  }
+  body.one-page-home .top-section-nav.menu-open .menu-toggle-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  body.one-page-home .top-section-nav.menu-open .menu-toggle-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  body.one-page-home > .profile-sidebar {
+    display: block;
+    width: 100%;
+    order: 2;
+  }
+  body.one-page-home > .one-page-content {
+    order: 3;
+  }
+}
